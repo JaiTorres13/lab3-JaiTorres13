@@ -3,8 +3,7 @@
 	import java.awt.Insets;
 	import javax.swing.JPanel;
 	 
-	public class MyPanelClass extends JPanel {
-	            
+	public class MyPanelClass extends JPanel {          
 		/**
 		 * 
 		 */
@@ -34,11 +33,16 @@
 	                        
 	                      //Inner Border
 	                        g.setColor(Color.WHITE);
-	                        g.drawRect(x1 + 5, y1 + 5, width - 10 , height - 10);
-	                   
+	                        g.drawRect(x1 + 5, y1 + 5, width - 10 , height - 10);  
 	                        
-	                       
-	                      
+	                      //Diagonal Line
+	                        g.setColor(Color.DARK_GRAY);
+	                        g.drawLine(x1, y1, x2, y2);
+	                        g.setColor(Color.GREEN);
+	                        g.drawLine(x2, y1, x1, y2);
+	                        
+	                        g.setColor(Color.LIGHT_GRAY);
+	                        g.fillOval(x1 + 73, y1 + 73, 55, 55);           
 	            }
 	}
 
